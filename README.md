@@ -37,11 +37,10 @@ for i in {10..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-so
 for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M7/M7_traffic-data_FY2009_Q${j}_csv.zip; done
 
 #NorthConnex (2021Q2 - present)
-wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/NCX/NCX_traffic-data_FY2021_Q2_csv.zip
+for i in {21..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/NCX/NCX_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
 
 #M5E
-wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M5E/M5E_traffic-data_FY2021_Q2_csv.zip
-wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M5E/M5E_traffic-data_FY2021_Q2_csv.zip
+for i in {21..22}; do echo $i;for j in {1..4}; do echo $j; wget  https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M5E/M5E_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
 
 #unzip it all
 unzip '*.zip'
