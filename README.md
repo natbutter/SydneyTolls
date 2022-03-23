@@ -5,12 +5,9 @@ Some python notebooks exploring Sydney Toll Road data.
 I downloaded all the data from here
 https://nswtollroaddata.com/data-download/
 
-You can download from here in one go quickly:
-https://www.dropbox.com/sh/z1vgkm3pctomisl/AABszp93e0x-Kr1i0CB2wxL5a?dl=0
-
 Put all these files in the 'data' directory. And then run the notebooks.
 
-You can download most of the data in one go with Bash doing something like this for each of the Toll Roads:
+You can download most of the data quickly in one go with Bash doing something like this for each of the Toll Roads:
 ```
 #CCT (2009Q2 - present)
 for j in {2..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/CCT/CCT_traffic-data_FY2009_Q${j}_csv.zip; done
@@ -61,7 +58,8 @@ Explore them to find out more.
 
 Key points: 
 
-* There were 2,120,731,776 total trips on sydney Toll roads (not including M5) between 2009 and 2019.
+* There were 3,361,498,446 total trips on sydney Toll roads between 2009 and 2022.
 * There is not much traffic on the roads at Christmas time.
+* You can see COVID lockdowns in the traffic!
 
 
