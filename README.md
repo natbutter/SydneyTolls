@@ -47,7 +47,6 @@ rm *.zip
 #Remove M7 "trips" (keep "passages" as they are equivalent to other roads' trips.)
 
 ```
-##TODO: The M5,this data is laid out a bit different... so the above command needs to be adapted.
 
 
 ## Python Notebooks
@@ -55,6 +54,7 @@ The two notebooks look at the data in different ways.
 ***TransportVis.ipynb*** deep dives into the CCT.
 ***TollDataSydney.ipynb*** looks at an overview of the entire toll set.
 Explore them to find out more.
+The data is growing every year, so we may need to adapt them or consider new ways to visualise the data in the future (especially TollDataSydney) as they consume more ram!
 
 Key points: 
 
