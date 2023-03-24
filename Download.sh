@@ -6,7 +6,7 @@ cd data
 start_year=2009
 end_year=2023
 
-#CCT (2009Q2 - present)
+#All roads
 
 for TOLL in CCT M2 LCT ED M4 M7 NCX M5E M5; do
   for i in $(seq $start_year $end_year); do
@@ -20,9 +20,8 @@ for TOLL in CCT M2 LCT ED M4 M7 NCX M5E M5; do
   done;
 done
 
-#unzip it all
+#unzip it all, note m5 trips will overwrite one another for early data.
 unzip '*.zip'
 
 #Remove zips
-#rm *.zip
-#Remove M7 "trips" (keep "passages" as they are equivalent to other roads' trips.)
+rm *.zip 

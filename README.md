@@ -7,46 +7,15 @@ https://nswtollroaddata.com/data-download/
 
 Put all these files in the 'data' directory. And then run the notebooks.
 
-You can download most of the data quickly in one go with Bash doing something like this for each of the Toll Roads:
+You can download most of the data quickly in one go with Bash for each of the Toll Roads using the *Download.sh* script.
 ```
-#CCT (2009Q2 - present)
-for j in {2..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/CCT/CCT_traffic-data_FY2009_Q${j}_csv.zip; done
-
-for i in {10..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/CCT/CCT_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#M2 (2009Q2 - present)
-for j in {2..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M2/M2_traffic-data_FY2009_Q${j}_csv.zip; done
-
-for i in {10..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M2/M2_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#LCT (2010Q3 - present)
-for i in {10..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/LCT/LCT_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#ED (2010 - present)
-for i in {10..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/ED/ED_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#M4 (2019 - present)
-for i in {19..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M4/M4_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#M7 (2009Q1 - present)
-for i in {10..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M7/M7_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M7/M7_traffic-data_FY2009_Q${j}_csv.zip; done
-
-#NorthConnex (2021Q2 - present)
-for i in {21..22}; do echo $i;for j in {1..4}; do echo $j; wget https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/NCX/NCX_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#M5E
-for i in {21..22}; do echo $i;for j in {1..4}; do echo $j; wget  https://s3.ap-southeast-2.amazonaws.com/accc-assetdata-prod/data/accc/upload/asset/M5E/M5E_traffic-data_FY20${i}_Q${j}_csv.zip; done; done
-
-#unzip it all
-unzip '*.zip'
-
-#Remove zips
-rm *.zip
-#Remove M7 "trips" (keep "passages" as they are equivalent to other roads' trips.)
+bash Download.sh
 
 ```
+
+Some toll road data sets contain just "trips". These are single "beeps" as one moves under a gantry. Some data contain a 'trips' and a 'passages' file, in this case 'passages' indicates a single "beep", whereas 'trips' are the combined "entry" and "exit" data for a journey through a toll road. 
+
+The M5 data prior 2018 came in a completely different format. Homework for someone to add.
 
 
 ## Python Notebooks
@@ -58,7 +27,7 @@ The data is growing every year, so we may need to adapt them or consider new way
 
 Key points: 
 
-* There were 3,361,498,446 total trips on sydney Toll roads between 2009 and 2022.
+* There were 3,868,005,180 total trips on sydney Toll roads between 2009 and 2023.
 * There is not much traffic on the roads at Christmas time.
 * You can see COVID lockdowns in the traffic!
 
