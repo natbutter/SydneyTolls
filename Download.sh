@@ -2,9 +2,10 @@
 
 # Downloads all the data from https://nswtollroaddata.com/data-download/
 # Set the current year and run
+mkdir -p data
 cd data
 start_year=2009
-end_year=2023
+end_year=2024
 
 #All roads
 
