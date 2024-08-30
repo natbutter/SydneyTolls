@@ -27,7 +27,7 @@ The data is growing every year, so we may need to adapt them or consider new way
 
 Key points: 
 
-* There were 3,868,005,180 total trips on sydney Toll roads between 2009 and 2023.
+* There were 4,361,208,977 total trips on sydney Toll roads between 2009 and 2024.
 * There is not much traffic on the roads at Christmas time.
 * You can see COVID lockdowns in the traffic!
 
