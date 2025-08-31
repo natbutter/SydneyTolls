@@ -22,18 +22,17 @@ The M5 data prior 2018 came in a completely different format. Homework for someo
 ## Python Notebooks
 The two notebooks look at the data in different ways. You can run them directly on Kaggle!
 
-* [***sydney-toll-roads-CCT.ipynb***](https://www.kaggle.com/code/astrobutter/sydney-toll-roads) deep dives into the CCT.
+* [***sydney-toll-roads-CCT.ipynb***](https://www.kaggle.com/code/astrobutter/sydney-toll-roads-cct) deep dives into the CCT.
 * [***sydney-toll-roads.ipynb***](https://www.kaggle.com/code/astrobutter/sydney-toll-roads) looks at an overview of the entire toll set.
 
 Explore them to find out more.
-
-These can be viewd
-
 
 ## Key insights: 
 
 * There were 4,361,208,977 total trips on sydney Toll roads between 2009 and 2024.
 * There is not much traffic on the roads at Christmas time.
 * You can see COVID lockdowns in the traffic!
+
+![](./SydneyTolls_timelapse.gif)
 
 
